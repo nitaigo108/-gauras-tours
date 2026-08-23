@@ -71,9 +71,11 @@
       color: #253b38;
     }
 
-    .brand-mark {
-      font-size: 30px;
-      color: #c68a50;
+    .brand-logo {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      flex-shrink: 0;
     }
 
     .brand strong {
@@ -663,6 +665,11 @@
         min-height: 67px;
       }
 
+      .brand-logo {
+        width: 42px;
+        height: 42px;
+      }
+
       .brand small {
         display: none;
       }
@@ -775,7 +782,11 @@
     <div class="container nav-inner">
 
       <a class="brand" href="#top">
-        <span class="brand-mark">✿</span>
+        <img
+          src="favicon.svg"
+          alt="Gauras Sacred Tours logo"
+          class="brand-logo"
+        >
         <span>
           <strong>Gauras Sacred Tours</strong>
           <small>Soul Transformation · Awaken Your Heart</small>
