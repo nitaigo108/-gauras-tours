@@ -1,61 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Gauras Tours | Rishikesh & Vrindavan</title>
-
-  <meta
-    name="description"
-    content="A sacred journey through Rishikesh and Vrindavan, India. November 8–19, 2026. Yoga, kirtan, temples, sacred rivers, seva and spiritual community."
-  >
-
+  <meta name="description" content="A sacred journey through Rishikesh and Vrindavan, India. November 8–19, 2026. Yoga, kirtan, temples, sacred rivers, seva and spiritual community.">
   <link rel="icon" href="favicon.svg">
 
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
     body {
       font-family: Georgia, "Times New Roman", serif;
       color: #253b38;
       background: #fffdf8;
       line-height: 1.6;
     }
-
-    body.modal-open {
-      overflow: hidden;
-    }
-
-    img {
-      display: block;
-      width: 100%;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    button {
-      font: inherit;
-    }
-
-    .container {
-      width: min(1120px, 90%);
-      margin: 0 auto;
-    }
+    body.modal-open { overflow: hidden; }
+    img { display: block; width: 100%; }
+    a { text-decoration: none; }
+    button { font: inherit; }
+    .container { width: min(1120px, 90%); margin: 0 auto; }
 
     /* NAVIGATION */
-
     .nav {
       background: rgba(255, 253, 248, 0.97);
       position: sticky;
@@ -64,7 +31,6 @@
       border-bottom: 1px solid rgba(37, 59, 56, 0.1);
       backdrop-filter: blur(10px);
     }
-
     .nav-inner {
       min-height: 76px;
       display: flex;
@@ -72,38 +38,33 @@
       justify-content: space-between;
       gap: 25px;
     }
-
     .brand {
       display: flex;
       align-items: center;
       gap: 11px;
       color: #253b38;
     }
-
     .brand-logo {
       width: 48px;
       height: 48px;
       object-fit: contain;
       flex-shrink: 0;
     }
-
     .brand strong {
       display: block;
       font-size: 23px;
-      letter-spacing: 0.4px;
+      letter-spacing: .4px;
       font-weight: 600;
     }
-
     .brand small {
       display: block;
       font-family: Arial, sans-serif;
       color: #77817e;
       font-size: 10px;
       margin-top: 1px;
-      letter-spacing: 0.7px;
+      letter-spacing: .7px;
       text-transform: uppercase;
     }
-
     .nav-links {
       display: flex;
       align-items: center;
@@ -111,11 +72,8 @@
       font-family: Arial, sans-serif;
       font-size: 14px;
     }
-
-    .nav-links a {
-      color: #334b47;
-    }
-
+    .nav-links a { color: #334b47; }
+    .nav-links a:hover { color: #b7743d; }
     .menu-btn {
       display: none;
       border: none;
@@ -126,7 +84,6 @@
     }
 
     /* BUTTONS */
-
     .btn {
       display: inline-block;
       padding: 15px 25px;
@@ -134,71 +91,62 @@
       font-family: Arial, sans-serif;
       font-size: 14px;
       font-weight: 700;
+      transition: .2s ease;
       text-align: center;
       border: none;
       cursor: pointer;
-      transition: 0.2s ease;
     }
-
     .btn-primary {
       background: #2c6c65;
       color: white !important;
     }
-
     .btn-primary:hover {
       background: #245a55;
       transform: translateY(-1px);
     }
-
     .btn-gold {
       background: #e9bd76;
       color: #253b38;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      box-shadow: 0 8px 25px rgba(0,0,0,.15);
     }
-
     .btn-gold:hover {
       background: #f2cb8d;
       transform: translateY(-2px);
     }
-
     .btn-light {
       color: white;
-      border: 1px solid rgba(255,255,255,0.75);
-      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,.75);
+      background: rgba(255,255,255,.08);
     }
+    .btn-light:hover { background: rgba(255,255,255,.18); }
 
     /* HERO */
-
     .hero {
       min-height: calc(100vh - 76px);
       position: relative;
       display: flex;
       align-items: flex-end;
-
       background-image:
         linear-gradient(
           90deg,
-          rgba(13,38,37,0.72) 0%,
-          rgba(13,38,37,0.42) 48%,
-          rgba(13,38,37,0.10) 100%
+          rgba(13, 38, 37, .68) 0%,
+          rgba(13, 38, 37, .38) 52%,
+          rgba(13, 38, 37, .12) 100%
         ),
         linear-gradient(
           0deg,
-          rgba(13,38,37,0.50) 0%,
-          transparent 52%
+          rgba(13, 38, 37, .58) 0%,
+          rgba(13, 38, 37, .10) 65%
         ),
         url("ganga-walk.jpg");
-
       background-size: cover;
       background-position: center;
       color: white;
     }
-
     .hero-content {
       max-width: 820px;
       padding: 115px 0 95px;
     }
-
     .eyebrow {
       text-transform: uppercase;
       letter-spacing: 5px;
@@ -208,47 +156,43 @@
       color: #f2d8a3;
       margin-bottom: 17px;
     }
-
     .hero h1 {
       font-size: clamp(58px, 10vw, 112px);
-      line-height: 0.86;
+      line-height: .86;
       font-weight: 400;
       letter-spacing: -2px;
-      text-shadow: 0 4px 22px rgba(0,0,0,0.35);
+      text-shadow: 0 4px 22px rgba(0,0,0,.35);
     }
-
     .hero h1 span {
       display: block;
       margin-top: 10px;
     }
-
     .hero-script {
       display: block;
       font-style: italic;
       color: #f1c875;
       font-size: clamp(28px, 5vw, 48px);
+      font-weight: 400;
       margin-top: 25px;
       letter-spacing: 1px;
+      line-height: 1.1;
     }
-
     .hero-tags {
       margin-top: 26px;
       font-family: Arial, sans-serif;
-      color: #f4dfb4;
+      color: #fff;
       font-size: 12px;
       letter-spacing: 2px;
       font-weight: 700;
     }
-
     .hero-subtitle {
       max-width: 630px;
       font-family: Arial, sans-serif;
       font-size: 17px;
       line-height: 1.75;
       margin-top: 18px;
-      color: rgba(255,255,255,0.96);
+      color: rgba(255,255,255,.96);
     }
-
     .hero-buttons {
       margin-top: 31px;
       display: flex;
@@ -257,29 +201,22 @@
     }
 
     /* TOUR FACTS */
-
     .tour-facts {
       background: #274e49;
       color: white;
     }
-
     .facts-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       max-width: 800px;
       margin: 0 auto;
     }
-
     .fact {
       padding: 27px 20px;
       text-align: center;
-      border-right: 1px solid rgba(255,255,255,0.14);
+      border-right: 1px solid rgba(255,255,255,.14);
     }
-
-    .fact:last-child {
-      border-right: 0;
-    }
-
+    .fact:last-child { border-right: 0; }
     .fact small {
       display: block;
       font-family: Arial, sans-serif;
@@ -289,33 +226,23 @@
       font-size: 10px;
       margin-bottom: 6px;
     }
-
     .fact strong {
       font-size: 18px;
       font-weight: 400;
     }
 
     /* GENERAL */
-
-    .section {
-      padding: 90px 0;
-    }
-
-    .section-alt {
-      background: #f4efe5;
-    }
-
+    .section { padding: 90px 0; }
+    .section-alt { background: #f4efe5; }
     .section-title {
       max-width: 720px;
       margin-bottom: 45px;
     }
-
     .section-title.center {
       margin-left: auto;
       margin-right: auto;
       text-align: center;
     }
-
     .kicker {
       font-family: Arial, sans-serif;
       color: #b8733f;
@@ -325,15 +252,13 @@
       letter-spacing: 3px;
       margin-bottom: 9px;
     }
-
     .section-title h2 {
       font-size: clamp(38px, 5vw, 58px);
       line-height: 1.1;
       font-weight: 400;
       color: #264b46;
     }
-
-    .description {
+    .section-title p.description {
       font-family: Arial, sans-serif;
       color: #65726f;
       margin-top: 16px;
@@ -341,14 +266,12 @@
     }
 
     /* INTRO */
-
     .intro-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 65px;
       align-items: center;
     }
-
     .intro-copy h2 {
       font-size: clamp(38px, 5vw, 56px);
       font-weight: 400;
@@ -356,7 +279,6 @@
       margin-bottom: 22px;
       color: #264b46;
     }
-
     .intro-copy p {
       font-family: Arial, sans-serif;
       color: #5f6f6b;
@@ -364,7 +286,6 @@
       font-size: 16px;
       line-height: 1.8;
     }
-
     .intro-photo img {
       min-height: 500px;
       height: 60vh;
@@ -373,22 +294,19 @@
     }
 
     /* INCLUDED */
-
     .include-grid {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 15px;
     }
-
     .include-card {
       background: white;
       border-radius: 14px;
       padding: 29px 22px;
       text-align: center;
-      border: 1px solid rgba(39,78,73,0.08);
-      box-shadow: 0 8px 28px rgba(37,59,56,0.05);
+      border: 1px solid rgba(39,78,73,.08);
+      box-shadow: 0 8px 28px rgba(37,59,56,.05);
     }
-
     .include-icon {
       width: 54px;
       height: 54px;
@@ -399,22 +317,20 @@
       place-items: center;
       font-size: 23px;
     }
-
     .include-card h3 {
       font-size: 18px;
       color: #264b46;
       margin-bottom: 10px;
+      font-weight: 600;
     }
-
     .include-card p {
       font-family: Arial, sans-serif;
       color: #66736f;
       font-size: 13px;
       line-height: 1.6;
     }
-
     .airfare-note {
-      max-width: 700px;
+      max-width: 650px;
       margin: 28px auto 0;
       font-family: Arial, sans-serif;
       font-size: 12px;
@@ -424,13 +340,11 @@
     }
 
     /* DESTINATIONS */
-
     .destination-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 20px;
     }
-
     .destination {
       min-height: 520px;
       position: relative;
@@ -442,36 +356,28 @@
       background-size: cover;
       background-position: center;
     }
-
     .rishikesh {
       background-image:
-        linear-gradient(to top, rgba(19,49,46,0.85), rgba(19,49,46,0.05)),
+        linear-gradient(to top, rgba(19,49,46,.85), rgba(19,49,46,.05)),
         url("riverside-kirtan.jpg");
     }
-
     .vrindavan {
       background-image:
-        linear-gradient(to top, rgba(50,35,23,0.85), rgba(50,35,23,0.05)),
+        linear-gradient(to top, rgba(50,35,23,.85), rgba(50,35,23,.05)),
         url("vrindavan-real.jpg");
     }
-
-    .destination-content {
-      padding: 40px;
-    }
-
+    .destination-content { padding: 40px; }
     .destination-content small {
       font-family: Arial, sans-serif;
       letter-spacing: 3px;
       text-transform: uppercase;
       color: #f3d694;
     }
-
     .destination-content h3 {
       font-size: 45px;
       font-weight: 400;
       margin: 5px 0 8px;
     }
-
     .destination-content p {
       max-width: 440px;
       font-style: italic;
@@ -479,12 +385,10 @@
     }
 
     /* ITINERARY */
-
     .journey-list {
       max-width: 900px;
       margin: 0 auto;
     }
-
     .journey-day {
       display: grid;
       grid-template-columns: 105px 1fr;
@@ -492,7 +396,6 @@
       padding: 27px 0;
       border-bottom: 1px solid #ded8cd;
     }
-
     .journey-day time {
       font-family: Arial, sans-serif;
       color: #b8733f;
@@ -500,19 +403,17 @@
       font-size: 14px;
       padding-top: 4px;
     }
-
     .journey-day h3 {
       color: #264b46;
       font-size: 22px;
       margin-bottom: 6px;
+      font-weight: 600;
     }
-
     .journey-day p {
       font-family: Arial, sans-serif;
       color: #66736f;
       font-size: 14px;
     }
-
     .daily-rhythm {
       margin: 0 auto 45px;
       max-width: 900px;
@@ -528,115 +429,96 @@
     }
 
     /* GALLERY */
-
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 16px;
     }
-
     .gallery-grid figure {
       overflow: hidden;
       border-radius: 10px;
       background: #eee;
     }
-
     .gallery-grid img {
       width: 100%;
       height: 390px;
       object-fit: cover;
     }
-
     .photo-disclaimer {
-      max-width: 760px;
-      margin: 22px auto 0;
+      max-width: 700px;
+      margin: 24px auto 0;
       text-align: center;
       font-family: Arial, sans-serif;
-      color: #777;
+      color: #737b78;
       font-size: 12px;
-      line-height: 1.6;
+      font-style: italic;
     }
 
     /* PACKING */
-
     .packing-list {
-      max-width: 760px;
-      margin: 0 auto;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      max-width: 900px;
+      margin: 0 auto;
     }
-
     .packing-item {
+      background: #fff;
+      border: 1px solid #e7dfd3;
+      border-radius: 12px;
+      padding: 18px 20px;
       font-family: Arial, sans-serif;
-      background: white;
-      padding: 17px 20px;
-      border-radius: 9px;
-      color: #4d615d;
-      border: 1px solid #ece6dc;
+      color: #4d625e;
+      font-size: 14px;
     }
 
     /* CTA */
-
     .cta {
-      background:
-        linear-gradient(rgba(27,59,55,0.83), rgba(27,59,55,0.83)),
-        url("ganga-walk.jpg");
-      background-size: cover;
-      background-position: center;
-      color: white;
+      background: #274e49;
+      color: #fff;
+      padding: 90px 0;
       text-align: center;
-      padding: 95px 0;
     }
-
     .cta h2 {
-      font-size: clamp(43px, 6vw, 70px);
+      font-size: clamp(40px, 6vw, 64px);
       font-weight: 400;
-      line-height: 1.05;
+      line-height: 1.08;
+      margin-bottom: 18px;
     }
-
-    .cta p {
-      max-width: 670px;
-      margin: 20px auto 28px;
+    .cta p:not(.eyebrow) {
+      max-width: 650px;
+      margin: 0 auto 28px;
       font-family: Arial, sans-serif;
-      color: rgba(255,255,255,0.88);
+      color: rgba(255,255,255,.82);
       line-height: 1.8;
     }
 
     /* BOOKING MODAL */
-
     .booking-modal {
+      display: none;
       position: fixed;
       inset: 0;
-      z-index: 5000;
-      display: none;
+      z-index: 2000;
+      background: rgba(12, 29, 27, .76);
+      padding: 24px;
+      overflow-y: auto;
       align-items: center;
       justify-content: center;
-      padding: 20px;
-      background: rgba(12,29,27,0.78);
-      backdrop-filter: blur(8px);
     }
-
-    .booking-modal.open {
-      display: flex;
-    }
-
+    .booking-modal.open { display: flex; }
     .booking-card {
-      position: relative;
-      width: min(610px, 100%);
-      max-height: 92vh;
-      overflow-y: auto;
+      width: min(720px, 100%);
       background: #fffdf8;
-      border-radius: 24px;
-      padding: 48px 38px 38px;
-      box-shadow: 0 30px 90px rgba(0,0,0,0.35);
+      border-radius: 22px;
+      padding: 50px 42px 34px;
+      position: relative;
       text-align: center;
+      box-shadow: 0 25px 80px rgba(0,0,0,.26);
     }
-
     .booking-close {
       position: absolute;
       right: 18px;
-      top: 15px;
+      top: 16px;
       width: 42px;
       height: 42px;
       border-radius: 50%;
@@ -646,7 +528,6 @@
       font-size: 24px;
       cursor: pointer;
     }
-
     .booking-kicker {
       font-family: Arial, sans-serif;
       text-transform: uppercase;
@@ -656,14 +537,12 @@
       font-weight: 700;
       margin-bottom: 10px;
     }
-
     .booking-card h2 {
       color: #264b46;
-      font-size: clamp(35px,7vw,50px);
+      font-size: clamp(35px, 7vw, 50px);
       line-height: 1.08;
       font-weight: 400;
     }
-
     .booking-intro {
       max-width: 470px;
       margin: 16px auto 28px;
@@ -672,28 +551,24 @@
       font-size: 14px;
       line-height: 1.7;
     }
-
     .payment-options {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 15px;
     }
-
     .payment-option {
       border: 1px solid #e5ddd0;
-      background: white;
+      background: #fff;
       border-radius: 16px;
       padding: 25px 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
-
     .payment-option.featured {
       border: 2px solid #dab36f;
       background: #fffaf1;
     }
-
     .payment-label {
       font-family: Arial, sans-serif;
       text-transform: uppercase;
@@ -703,13 +578,706 @@
       font-weight: 700;
       margin-bottom: 8px;
     }
-
     .payment-option h3 {
       font-size: 22px;
+      line-height: 1.2;
+      font-weight: 500;
       color: #264b46;
       margin-bottom: 5px;
     }
-
     .payment-price {
       font-size: 32px;
-      color: #
+      color: #264b46;
+      margin: 9px 0 12px;
+    }
+    .payment-option p {
+      font-family: Arial, sans-serif;
+      color: #687570;
+      font-size: 12px;
+      line-height: 1.6;
+      min-height: 58px;
+      margin-bottom: 18px;
+    }
+    .payment-option .btn {
+      width: 100%;
+      margin-top: auto;
+    }
+    .deposit-note {
+      max-width: 480px;
+      margin: 22px auto 0;
+      color: #7d807d;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      line-height: 1.6;
+    }
+
+    /* FOOTER */
+    .footer {
+      background: #182d2a;
+      color: white;
+      padding: 45px 0;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 35px;
+      align-items: center;
+    }
+    .footer strong {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+    .footer p {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      color: rgba(255,255,255,.65);
+    }
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+    }
+    .footer-links a { color: rgba(255,255,255,.75); }
+
+    /* TABLET */
+    @media (max-width: 900px) {
+      .include-grid { grid-template-columns: repeat(2, 1fr); }
+      .intro-grid, .destination-grid { grid-template-columns: 1fr; }
+      .intro-photo img { height: 450px; min-height: 0; }
+    }
+
+    /* MOBILE */
+    @media (max-width: 700px) {
+      .nav-inner { min-height: 67px; }
+      .brand-logo { width: 42px; height: 42px; }
+      .brand strong { font-size: 20px; }
+      .brand small { display: none; }
+      .menu-btn { display: block; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 67px;
+        background: #fffdf8;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 22px 5%;
+        border-bottom: 1px solid #ddd;
+        box-shadow: 0 8px 20px rgba(0,0,0,.08);
+      }
+      .nav-links.open { display: flex; }
+      .hero {
+        min-height: calc(100vh - 67px);
+        align-items: flex-end;
+        background-position: 58% center;
+      }
+      .hero-content { padding: 95px 0 65px; }
+      .hero h1 {
+        font-size: clamp(56px, 18vw, 82px);
+        line-height: .88;
+      }
+      .hero-script {
+        font-size: 30px;
+        margin-top: 21px;
+      }
+      .hero-tags {
+        line-height: 1.8;
+        font-size: 10px;
+        letter-spacing: 1.6px;
+      }
+      .hero-subtitle {
+        font-size: 15px;
+        line-height: 1.65;
+      }
+      .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .hero-buttons .btn { width: 100%; }
+      .facts-grid { grid-template-columns: 1fr 1fr; }
+      .fact { padding: 22px 10px; }
+      .fact strong { font-size: 14px; }
+      .section { padding: 65px 0; }
+      .include-grid, .gallery-grid, .packing-list { grid-template-columns: 1fr; }
+      .include-card { padding: 25px 20px; }
+      .gallery-grid img { height: 310px; }
+      .destination { min-height: 440px; }
+      .destination-content { padding: 30px; }
+      .destination-content h3 { font-size: 38px; }
+      .daily-rhythm { grid-template-columns: 1fr; }
+      .journey-day {
+        grid-template-columns: 75px 1fr;
+        gap: 17px;
+      }
+      .payment-options { grid-template-columns: 1fr; }
+      .booking-card {
+        padding: 47px 22px 27px;
+        border-radius: 18px;
+      }
+      .payment-option p { min-height: 0; }
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .footer-links { flex-wrap: wrap; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top">
+        <img src="favicon.svg" alt="Gauras Tours logo" class="brand-logo">
+        <span>
+          <strong>Gauras Tours</strong>
+          <small>Soul Transformation · Awaken Your Heart</small>
+        </span>
+      </a>
+
+      <button class="menu-btn" id="menuButton" aria-label="Open menu">☰</button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#journey">The Journey</a>
+        <a href="#included">What's Included</a>
+        <a href="#gallery">Photos</a>
+        <a href="#packing">Packing</a>
+        <button class="btn btn-primary booking-trigger" type="button">
+          Secure Your Booking
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <p class="eyebrow">Sacred Journeys To</p>
+
+          <h1>
+            Rishikesh
+            <span>&amp; Vrindavan</span>
+          </h1>
+
+          <span class="hero-script">Awaken · Open · Transform</span>
+
+          <p class="hero-tags">
+            YOGA · KIRTAN · TEMPLE VISITS · SACRED SERVICE
+          </p>
+
+          <p class="hero-subtitle">
+            A life-changing journey through the spiritual heart of India,
+            with daily practice, ancient temples, holy rivers and meaningful community.
+          </p>
+
+          <div class="hero-buttons">
+            <button class="btn btn-gold booking-trigger" type="button">
+              Secure Your Booking →
+            </button>
+
+            <a class="btn btn-light" href="#journey">
+              View Itinerary
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tour-facts">
+      <div class="container facts-grid">
+        <div class="fact">
+          <small>Dates</small>
+          <strong>8–19 November 2026</strong>
+        </div>
+
+        <div class="fact">
+          <small>Journey</small>
+          <strong>12 Days</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container intro-grid">
+        <div class="intro-copy">
+          <p class="kicker">India: A Journey Within</p>
+
+          <h2>
+            More than a tour.<br>
+            A journey of the heart.
+          </h2>
+
+          <p>
+            Travel from the sacred Himalayan foothills of Rishikesh
+            to the timeless devotional atmosphere of Vrindavan.
+          </p>
+
+          <p>
+            Each day combines spiritual practice with authentic experiences:
+            yoga, kirtan, temple visits, sacred rivers, nature, pilgrimage,
+            seva and time for personal reflection.
+          </p>
+
+          <p>
+            This journey is created for those who want to experience India
+            with greater depth, simplicity and spiritual purpose.
+          </p>
+        </div>
+
+        <div class="intro-photo">
+          <img src="vrindavan-real.jpg" alt="Sacred atmosphere of Vrindavan, India">
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="included">
+      <div class="container">
+        <div class="section-title center">
+          <p class="kicker">Travel With Ease</p>
+          <h2>What's Included</h2>
+          <p class="description">
+            The essential details are thoughtfully arranged so you
+            can focus on the experience itself.
+          </p>
+        </div>
+
+        <div class="include-grid">
+          <article class="include-card">
+            <div class="include-icon">✦</div>
+            <h3>Tour Guidance</h3>
+            <p>
+              Experienced guidance and on-the-ground support
+              throughout the pilgrimage.
+            </p>
+          </article>
+
+          <article class="include-card">
+            <div class="include-icon">🚐</div>
+            <h3>Private Transport</h3>
+            <p>
+              Comfortable private group transportation between
+              destinations and sacred sites.
+            </p>
+          </article>
+
+          <article class="include-card">
+            <div class="include-icon">✿</div>
+            <h3>Sacred Experiences</h3>
+            <p>
+              Temples, holy rivers, parikrama, kirtan, satsang,
+              seva and meaningful spiritual experiences.
+            </p>
+          </article>
+
+          <article class="include-card">
+            <div class="include-icon">☼</div>
+            <h3>Vegetarian Meals</h3>
+            <p>
+              Fresh, wholesome and nourishing vegetarian meals
+              throughout the journey.
+            </p>
+          </article>
+
+          <article class="include-card">
+            <div class="include-icon">⌂</div>
+            <h3>3-Star Hotels or Better</h3>
+            <p>
+              Comfortable Western-style hotel accommodation
+              throughout the pilgrimage.
+            </p>
+          </article>
+        </div>
+
+        <p class="airfare-note">
+          * International airfare and flight costs are not included in the tour price.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container destination-grid">
+        <article class="destination rishikesh">
+          <div class="destination-content">
+            <small>Rishikesh</small>
+            <h3>Awaken</h3>
+            <p>
+              “In the stillness of the mountains and beside the
+              sacred Ganga, we remember what truly matters.”
+            </p>
+          </div>
+        </article>
+
+        <article class="destination vrindavan">
+          <div class="destination-content">
+            <small>Vrindavan</small>
+            <h3>Open the Heart</h3>
+            <p>
+              “Enter the devotional heart of India, where sacred
+              places, timeless teachings and loving service come alive.”
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="journey">
+      <div class="container">
+        <div class="section-title center">
+          <p class="kicker">November 8–19, 2026</p>
+          <h2>The Journey</h2>
+          <p class="description">
+            A thoughtful rhythm of pilgrimage, practice,
+            exploration, community and reflection.
+          </p>
+        </div>
+
+        <div class="daily-rhythm">
+          <div>
+            ☀️ <strong>Daily Morning Yoga</strong><br>
+            Begin the day grounded, open and present.
+          </div>
+
+          <div>
+            🌙 <strong>Evening Reflection</strong><br>
+            Kirtan, spiritual readings and time together.
+          </div>
+        </div>
+
+        <div class="journey-list">
+
+          <div class="journey-day">
+            <time>NOV 8</time>
+            <div>
+              <h3>Arrival in Delhi</h3>
+              <p>
+                Arrive in Delhi, transfer to the hotel, settle in
+                and prepare for the journey ahead.
+              </p>
+            </div>
+          </div>
+
+          <div class="journey-day">
+            <time>NOV 9</time>
+            <div>
+              <h3>Journey to Rishikesh</h3>
+              <p>
+                After breakfast, travel north toward the Himalayan
+                foothills and the sacred city of Rishikesh.
+              </p>
+            </div>
+          </div>
+
+          <div class="journey-day">
+            <time>NOV 10</time>
+            <div>
+              <h3>Waterfall Hike &amp; Ganga Puja</h3>
+              <p>
+                Morning yoga, a beautiful waterfall hike and an
+                evening experience beside the sacred Ganga.
+              </p>
+            </div>
+          </div>
+
+          <div class="journey-day">
+            <time>NOV 11</time>
+            <div>
+              <h3>Devi Temple Sunrise</h3>
+              <p>
+                Rise early for a sunrise visit to Devi Temple
+                followed by a scenic hike down through the Himalayan landscape.
+              </p>
+            </div>
+          </div>
+
+          <div class="journey-day">
+            <time>NOV 12</time>
+            <div>
+              <h3>Vashishtha's Cave</h3>
+              <p>
+                Visit the ancient meditation cave associated with the sage
+                Vashishtha and spend contemplative time beside the Ganga.
+              </p>
+            </div>
+          </div>
+
+          <div class="journey-day">
+            <time>NOV 13</time>
+            <div>
+              <h3>Haridwar Excursion</h3>
+              <p>
+                Explore one of India's most sacred pilgrimage cities
+                and experience its powerful river and temple atmosphere.
+              </p>
+            </div>
+          </div>
+
+          <div class="journey-day">
+            <time>NOV 14</time>
+            <div>
+              <h3>Neelkanth Mahadev Temple</h3>
+              <p>
+                Journey into the hills for a sacred temple visit
+                surrounded by the natural beauty of the Himalayan region.
+              </p>
+            </div>
+          </div>
+
+          <div class="journey-day">
+            <time>NOV 15</time>
+            <div>
+              <h3>Journey to Vrindavan</h3>
+              <p>
+                Travel from Rishikesh to Vrindavan and enter
+                the devotional heart of Braj.
+              </p>
+            </div>
+          </div>
+
+          <div class="journey-day">
+            <time>NOV 16</time>
+            <div>
+              <h3>Govardhan Parikrama &amp; Seva</h3>
+              <p>
+                Experience a portion of sacred Govardhan parikrama
+                followed by meaningful seva at the widows' ashram
+                near Radha-kunda.
+              </p>
+            </div>
+          </div>
+
+          <div class="journey-day">
+            <time>NOV 17</time>
+            <div>
+              <h3>Krishna-Balaram &amp; Radha-Raman</h3>
+              <p>
+                Attend the morning spiritual program, visit the historic
+                Radha-Raman Temple and spend the evening with sacred
+                readings and spiritual discussion.
+              </p>
+            </div>
+          </div>
+
+          <div class="journey-day">
+            <time>NOV 18</time>
+            <div>
+              <h3>Barsana</h3>
+              <p>
+                Travel into sacred Braj to visit Barsana, meet saints
+                and sadhus and experience places rich with devotional history.
+              </p>
+            </div>
+          </div>
+
+          <div class="journey-day">
+            <time>NOV 19</time>
+            <div>
+              <h3>Return to Delhi</h3>
+              <p>
+                Travel to Delhi for onward flights, with an optional
+                Taj Mahal sunrise experience depending on travel schedules.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="section-title center">
+          <p class="kicker">Real People · Real Experiences</p>
+          <h2>Moments From the Journey</h2>
+        </div>
+
+        <div class="gallery-grid">
+          <figure>
+            <img src="rickshaw.jpg" alt="Travellers experiencing India together" loading="lazy">
+          </figure>
+
+          <figure>
+            <img src="riverside-kirtan.jpg" alt="Kirtan beside the sacred river" loading="lazy">
+          </figure>
+
+          <figure>
+            <img src="ganga-walk.jpg" alt="Travellers walking beside the Ganga" loading="lazy">
+          </figure>
+
+          <figure>
+            <img src="seva.jpg" alt="Travellers participating in sacred service" loading="lazy">
+          </figure>
+        </div>
+
+        <p class="photo-disclaimer">
+          These are original photographs from real journeys and experiences.
+          The photographs and faces have not been AI-generated or AI-altered.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="packing">
+      <div class="container">
+        <div class="section-title center">
+          <p class="kicker">Travel Light</p>
+          <h2>Packing Essentials</h2>
+        </div>
+
+        <div class="packing-list">
+          <div class="packing-item">✓ Toiletries and personal essentials</div>
+          <div class="packing-item">✓ Light windbreaker for early mornings</div>
+          <div class="packing-item">✓ Breathable clothing for afternoon warmth</div>
+          <div class="packing-item">✓ Comfortable shoes for hiking</div>
+          <div class="packing-item">✓ Sandals for everyday use</div>
+          <div class="packing-item">✓ Lightweight yoga mat</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <p class="eyebrow">More Than a Trip</p>
+        <h2>A Return to What Matters</h2>
+        <p>
+          Come as you are. Leave with a lighter heart, a deeper
+          spiritual practice, meaningful friendships and memories
+          that last a lifetime.
+        </p>
+
+        <button class="btn btn-gold booking-trigger" type="button">
+          Secure Your Booking →
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Gauras Tours</strong>
+        <p>Soul Transformation · Awaken Your Heart</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#journey">Journey</a>
+        <a href="#included">Included</a>
+        <a href="#gallery">Photos</a>
+        <a href="#packing">Packing</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOOKING WINDOW -->
+  <div class="booking-modal" id="bookingModal" aria-hidden="true">
+    <div class="booking-card" role="dialog" aria-modal="true" aria-labelledby="bookingTitle">
+
+      <button class="booking-close" id="bookingClose" type="button" aria-label="Close booking window">
+        ×
+      </button>
+
+      <p class="booking-kicker">Gauras Tours · India 2026</p>
+
+      <h2 id="bookingTitle">Secure Your Booking</h2>
+
+      <p class="booking-intro">
+        Choose the payment option that works best for you.
+        Choose either the A$500 deposit or the A$2,800 full payment option below.
+      </p>
+
+      <div class="payment-options">
+
+        <div class="payment-option featured">
+          <div class="payment-label">Secure Your Place</div>
+          <h3>Pay Your Deposit</h3>
+          <div class="payment-price">A$500</div>
+          <p>
+            Pay the non-refundable A$500 deposit to secure
+            your place on the November pilgrimage.
+          </p>
+          <a class="btn btn-gold" href="https://square.link/u/m7vlP7aY?src=sheet" target="_blank" rel="noopener">
+            Pay A$500 Deposit →
+          </a>
+        </div>
+
+        <div class="payment-option">
+          <div class="payment-label">Pay In Full</div>
+          <h3>Complete Payment</h3>
+          <div class="payment-price">A$2,800</div>
+          <p>
+            Pay the full A$2,800 pilgrimage amount
+            and secure your reservation in full.
+          </p>
+          <a class="btn btn-primary" href="https://square.link/u/HUQO2lOY?src=sheet" target="_blank" rel="noopener">
+            Pay A$2,800 in Full →
+          </a>
+        </div>
+
+      </div>
+
+      <p class="deposit-note">
+        The A$500 reservation deposit is non-refundable and is applied
+        toward the total A$2,800 pilgrimage price.
+        International airfare is not included.
+      </p>
+
+    </div>
+  </div>
+
+  <script>
+    const menuButton = document.getElementById("menuButton");
+    const navLinks = document.getElementById("navLinks");
+
+    menuButton.addEventListener("click", function () {
+      navLinks.classList.toggle("open");
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(function(link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("open");
+      });
+    });
+
+    const bookingModal = document.getElementById("bookingModal");
+    const bookingClose = document.getElementById("bookingClose");
+    const bookingTriggers = document.querySelectorAll(".booking-trigger");
+
+    function openBooking() {
+      bookingModal.classList.add("open");
+      bookingModal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("modal-open");
+      navLinks.classList.remove("open");
+    }
+
+    function closeBooking() {
+      bookingModal.classList.remove("open");
+      bookingModal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("modal-open");
+    }
+
+    bookingTriggers.forEach(function(button) {
+      button.addEventListener("click", openBooking);
+    });
+
+    bookingClose.addEventListener("click", closeBooking);
+
+    bookingModal.addEventListener("click", function(event) {
+      if (event.target === bookingModal) {
+        closeBooking();
+      }
+    });
+
+    document.addEventListener("keydown", function(event) {
+      if (event.key === "Escape") {
+        closeBooking();
+      }
+    });
+  </script>
+
+</body>
+</html>
